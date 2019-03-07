@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: media
+label: Media
+icon_uuid: null
+description: 'Use <em>media</em> to add a media item and a caption, as well as choose the media item''s display options.'
+behavior_plugins: {  }

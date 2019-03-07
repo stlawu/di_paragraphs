@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.media_carousel_item
+    - field.field.paragraph.media.field_media
+    - field.field.paragraph.media.field_media_caption
+    - paragraphs.paragraphs_type.media
+  module:
+    - text
+id: paragraph.media.media_carousel_item
+targetEntityType: paragraph
+bundle: media
+mode: media_carousel_item
+content:
+  field_media:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+      view_mode: basic
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_media_caption:
+    weight: 1
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

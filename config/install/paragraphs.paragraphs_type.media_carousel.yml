@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: media_carousel
+label: 'Media Carousel'
+icon_uuid: null
+description: 'Use <em>media carousel</em> to add multiple media items to be displayed in a slideshow.'
+behavior_plugins: {  }

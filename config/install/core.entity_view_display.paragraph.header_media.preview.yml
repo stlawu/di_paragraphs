@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.header_media.field_header_media
+    - field.field.paragraph.header_media.field_header_media_caption
+    - field.field.paragraph.header_media.field_header_media_display_opti
+    - paragraphs.paragraphs_type.header_media
+  module:
+    - options
+    - text
+id: paragraph.header_media.preview
+targetEntityType: paragraph
+bundle: header_media
+mode: preview
+content:
+  field_header_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: preview
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_header_media_caption:
+    type: text_default
+    weight: 1
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_header_media_display_opti:
+    type: list_default
+    weight: 3
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

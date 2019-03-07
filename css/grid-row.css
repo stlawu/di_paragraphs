@@ -1,0 +1,40 @@
+/**
+ * Grid row paragraph type
+ * Based off of Bootstrap 3.3.7
+ * 
+ */
+/**
+ * Paragraphs Variables.
+ * Based off of Bootstrap 3.3.7
+ *
+ */
+.paragraph--type--grid-column {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+@media (min-width: 768px) {
+  .grid.two-columns .paragraph--type--grid-column {
+    width: 50%;
+    float: left; } }
+
+@media (min-width: 768px) {
+  .grid.three-columns .paragraph--type--grid-column {
+    width: 33.33333333%;
+    float: left; } }
+
+@media (min-width: 768px) {
+  .grid.four-columns .paragraph--type--grid-column {
+    width: 25%;
+    float: left; } }
+
+@media (min-width: 768px) {
+  .grid.five-columns .paragraph--type--grid-column {
+    width: 20%;
+    float: left; } }
+
+@media (min-width: 768px) {
+  .grid.six-columns .paragraph--type--grid-column {
+    width: 16.66666667%;
+    float: left; } }
+
+/*# sourceMappingURL=grid-row.css.map */

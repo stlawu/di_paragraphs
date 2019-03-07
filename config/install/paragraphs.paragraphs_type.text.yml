@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: text
+label: Text
+icon_uuid: null
+description: 'Use <em>text</em> to add a WYSIWYG textarea.'
+behavior_plugins: {  }

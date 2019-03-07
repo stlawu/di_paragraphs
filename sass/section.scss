@@ -1,0 +1,116 @@
+/**
+ * Section paragraph type
+ * Based off of Bootstrap 3.3.7
+ * 
+ */
+
+//
+// Variables
+// --------------------------------------------------
+
+@import "paragraphs-variables";
+
+// //** Unit-less `line-height` for use in components like buttons.
+// $line-height-base:        1.555; // 28/18
+
+// //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+// $line-height-computed: 28px;
+
+// //== Grid system
+// //
+// //## Define your custom responsive grid.
+
+// // //** Number of columns in the grid.
+// // $grid-columns:              12;
+// // //** Padding between columns. Gets divided in half for the left and right.
+// $grid-gutter-width:         30px;
+
+// //== Container sizes
+// //
+// //## Define the maximum width of `.container` for different screen sizes.
+
+// // Large screen / wide desktop
+// $container-large-desktop:      (1140px + $grid-gutter-width);
+// //** For `$screen-lg-min` and up.
+// $container-lg:                 $container-large-desktop;
+
+
+// // // Small screen / tablet
+// // //** Deprecated `$screen-sm` as of v3.0.1
+// // $screen-sm:                  768px;
+// // $screen-sm-min:              $screen-sm;
+
+// // Large screen / wide desktop
+// //** Deprecated `$screen-lg` as of v3.0.1
+// $screen-lg:                  1200px;
+// $screen-lg-min:              $screen-lg;
+
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+// Centered container element
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  floor(($gutter / 2));
+  padding-right: ceil(($gutter / 2));
+  @include clearfix;
+}
+
+// Section container element
+// Adapted from the container-fixed mixin in
+// Bootstrap 3.3.7 bootstrap/assets/stylesheets/bootstrap/mixins/_grid.scss partial
+
+
+@mixin make-section-container($gutter: $grid-gutter-width) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  floor(($gutter / 2));
+  padding-right: ceil(($gutter / 2));
+}
+
+// Section container paragraph padding and margins
+//
+// Adapted from .container-fluid in
+// Bootstrap 3.3.7 bootstrap/assets/stylesheets/bootstrap/_grid.scss partial
+
+.field--name-field-sections > .paragraph {
+  padding-top: $line-height-computed;
+  padding-bottom: $line-height-computed;
+}
+ 
+
+.section-container {
+  @include container-fixed;
+}
+
+.section-content-width {
+  @include container-fixed;
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}

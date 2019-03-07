@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header_media_display_opti
+    - paragraphs.paragraphs_type.header_media
+  module:
+    - options
+id: paragraph.header_media.field_header_media_display_opti
+field_name: field_header_media_display_opti
+entity_type: paragraph
+bundle: header_media
+label: 'Display Options'
+description: "<em><strong>Display options</strong></em> provide the ability to display the featured media in the narrative as a full-width cover image behind the title and subtitle or as smaller partial-width image below the title and subtitle.<br>\r\n<strong>Note:</strong> For low resolution images, or images that appear pixelated, select Partial width."
+required: true
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: content_reference
+label: 'Content Reference'
+icon_uuid: null
+description: 'Use <em>content reference</em> to reference existing content.'
+behavior_plugins: {  }

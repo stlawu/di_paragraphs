@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.di_content_browser
+  module:
+    - views
+name: di_content_browser
+label: 'Content Browser'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '480'
+  link_text: 'Select content'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  5ab5b495-43f5-4a24-a02c-800f213d799d:
+    settings:
+      view: di_content_browser
+      view_display: entity_browser_1
+      submit_text: 'Select content'
+      auto_select: false
+    uuid: 5ab5b495-43f5-4a24-a02c-800f213d799d
+    weight: 1
+    label: 'My Content'
+    id: view
+  7f73b466-6249-4694-9bdd-a801dd6e51b6:
+    settings:
+      view: di_content_browser
+      view_display: entity_browser_2
+      submit_text: 'Select content'
+      auto_select: false
+    uuid: 7f73b466-6249-4694-9bdd-a801dd6e51b6
+    weight: 2
+    label: 'All Content'
+    id: view

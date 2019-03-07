@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: grid_column
+label: Column
+icon_uuid: null
+description: 'Use <em>grid column</em> to build columns inside of a grid row <strong>only</strong>.'
+behavior_plugins: {  }

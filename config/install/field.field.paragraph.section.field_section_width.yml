@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_width
+    - paragraphs.paragraphs_type.section
+  module:
+    - options
+id: paragraph.section.field_section_width
+field_name: field_section_width
+entity_type: paragraph
+bundle: section
+label: Width
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

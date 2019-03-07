@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.content_reference.field_content_reference
+    - paragraphs.paragraphs_type.content_reference
+id: paragraph.content_reference.preview
+targetEntityType: paragraph
+bundle: content_reference
+mode: preview
+content:
+  field_content_reference:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden: {  }

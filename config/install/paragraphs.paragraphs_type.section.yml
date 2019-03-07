@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: section
+label: Section
+icon_uuid: null
+description: 'Use <em>section</em> to hold other paragraph types.'
+behavior_plugins: {  }

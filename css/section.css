@@ -1,0 +1,40 @@
+/**
+ * Section paragraph type
+ * Based off of Bootstrap 3.3.7
+ * 
+ */
+/**
+ * Paragraphs Variables.
+ * Based off of Bootstrap 3.3.7
+ *
+ */
+.field--name-field-sections > .paragraph {
+  padding-top: 28px;
+  padding-bottom: 28px; }
+
+.section-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .section-container:before, .section-container:after {
+    content: " ";
+    display: table; }
+  .section-container:after {
+    clear: both; }
+
+.section-content-width {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .section-content-width:before, .section-content-width:after {
+    content: " ";
+    display: table; }
+  .section-content-width:after {
+    clear: both; }
+  @media (min-width: 1200px) {
+    .section-content-width {
+      width: 1170px; } }
+
+/*# sourceMappingURL=section.css.map */

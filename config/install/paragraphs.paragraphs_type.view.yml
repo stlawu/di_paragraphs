@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: view
+label: View
+icon_uuid: null
+description: 'Use <em>view</em> to reference certain Drupal views.'
+behavior_plugins: {  }

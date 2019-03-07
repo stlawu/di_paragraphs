@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: heading
+label: Heading
+icon_uuid: null
+description: 'Use <em>heading</em> to add headings.'
+behavior_plugins: {  }

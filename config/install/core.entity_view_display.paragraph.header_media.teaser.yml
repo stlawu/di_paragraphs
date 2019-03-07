@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.teaser
+    - field.field.paragraph.header_media.field_header_media
+    - field.field.paragraph.header_media.field_header_media_caption
+    - field.field.paragraph.header_media.field_header_media_display_opti
+    - paragraphs.paragraphs_type.header_media
+id: paragraph.header_media.teaser
+targetEntityType: paragraph
+bundle: header_media
+mode: teaser
+content:
+  field_header_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_header_media_caption: true
+  field_header_media_display_opti: true

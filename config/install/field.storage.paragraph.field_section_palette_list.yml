@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_section_palette_list
+field_name: field_section_palette_list
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: red
+      label: Red
+    -
+      value: red-dark
+      label: 'Red dark'
+    -
+      value: brown
+      label: Brown
+    -
+      value: brown-dark
+      label: 'Brown dark'
+    -
+      value: gray-light
+      label: 'Gray light'
+    -
+      value: gray-medium
+      label: 'Gray medium'
+    -
+      value: gray-dark
+      label: 'Gray dark'
+    -
+      value: blue-light
+      label: 'Blue light'
+    -
+      value: blue-dark
+      label: 'Blue dark'
+    -
+      value: black
+      label: Black
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+name: 'Digital Initiatives: Paragraphs'
+type: module
+description: 'Paragraphs and shared fields'
+core: 8.x
+package: 'Digital Initiatives'
+dependencies:
+  - entity_reference_revisions
+  - field
+  - file
+  - image
+  - link
+  - media
+  - media_library
+  - options
+  - paragraphs
+  - system
+  - text
+  - token
+  - user
+  - viewsreference

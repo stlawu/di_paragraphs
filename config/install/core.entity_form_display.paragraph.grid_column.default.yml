@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grid_column.field_grid_column_content
+    - paragraphs.paragraphs_type.grid_column
+  module:
+    - paragraphs
+id: paragraph.grid_column.default
+targetEntityType: paragraph
+bundle: grid_column
+mode: default
+content:
+  field_grid_column_content:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: Item
+      title_plural: Items
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: add_above
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
