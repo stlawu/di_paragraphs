@@ -41,13 +41,18 @@
 {{ attach_library('di_paragraphs/section') }}
 
 {%
+  set section_style = [
+    background_color,
+    text_color
+  ]
+%}
+{%
   set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
     'paragraph--id--' ~ paragraph.id.value,
-    palette,
   ]
 %}
 {% set section_container_attribute = create_attribute() %}
@@ -58,7 +63,7 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes).setAttribute('style', section_style) }}>
     <div{{ section_container_attribute.addClass(section_container_classes) }}>
     {% block content %}
       {{ content }}

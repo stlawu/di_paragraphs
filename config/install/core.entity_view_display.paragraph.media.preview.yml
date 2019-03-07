@@ -3,8 +3,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.media.field_caption
+    - field.field.paragraph.media.field_citation
     - field.field.paragraph.media.field_media
-    - field.field.paragraph.media.field_media_caption
     - image.style.thumbnail
     - paragraphs.paragraphs_type.media
   module:
@@ -15,6 +16,22 @@ targetEntityType: paragraph
 bundle: media
 mode: preview
 content:
+  field_caption:
+    type: text_trimmed
+    weight: 1
+    label: inline
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_citation:
+    type: text_trimmed
+    weight: 2
+    label: inline
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
   field_media:
     weight: 0
     label: hidden
@@ -24,12 +41,6 @@ content:
     third_party_settings: {  }
     type: media_thumbnail
     region: content
-  field_media_caption:
-    weight: 1
-    label: visually_hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    type: text_trimmed
-    region: content
-hidden: {  }
+hidden:
+  created: true
+  uid: true

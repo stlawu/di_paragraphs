@@ -2,11 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.section.field_section_background_color
     - field.field.paragraph.section.field_section_content
-    - field.field.paragraph.section.field_section_palette_list
+    - field.field.paragraph.section.field_section_link_color
+    - field.field.paragraph.section.field_section_link_hover_color
+    - field.field.paragraph.section.field_section_text_color
     - field.field.paragraph.section.field_section_width
     - paragraphs.paragraphs_type.section
   module:
+    - color_field
     - entity_reference_revisions
 id: paragraph.section.default
 targetEntityType: paragraph
@@ -22,6 +26,29 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
+  field_section_link_color:
+    weight: -2
+    label: hidden
+    settings:
+      selector: '.paragraph.paragraph--id--[paragraph:id] a'
+      property: color
+      important: '1'
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_css
+    region: content
+  field_section_link_hover_color:
+    weight: -1
+    label: hidden
+    settings:
+      selector: '.paragraph.paragraph--id--[paragraph:id] a:hover'
+      property: color
+      important: '1'
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_css
+    region: content
 hidden:
-  field_section_palette_list: true
+  field_section_background_color: true
+  field_section_text_color: true
   field_section_width: true

@@ -2,14 +2,15 @@ langcode: en
 status: true
 dependencies:
   module:
+    - color_field
     - paragraphs
-    - text
-id: paragraph.field_media_caption
-field_name: field_media_caption
+id: paragraph.field_section_text_color
+field_name: field_section_text_color
 entity_type: paragraph
-type: text_long
-settings: {  }
-module: text
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
 locked: false
 cardinality: 1
 translatable: true

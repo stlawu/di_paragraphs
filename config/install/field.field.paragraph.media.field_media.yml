@@ -8,12 +8,13 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - media.type.video
+    - media.type.video_external
     - paragraphs.paragraphs_type.media
 id: paragraph.media.field_media
 field_name: field_media
 entity_type: paragraph
 bundle: media
-label: 'Media item'
+label: Media
 description: ''
 required: false
 translatable: true
@@ -28,8 +29,9 @@ settings:
       image: image
       remote_video: remote_video
       video: video
+      video_external: video_external
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: audio
+    auto_create_bundle: image
 field_type: entity_reference

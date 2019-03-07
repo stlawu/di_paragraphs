@@ -62,13 +62,47 @@ function di_paragraphs_theme($existing, $type, $theme, $path) {
  * Implements hook_preprocess_paragraph__section().
  * Prepares variables for paragraph--section.html.twig.
  */
+// function di_paragraphs_preprocess_paragraph__section(&$variables) {
+//   $p = $variables['paragraph'];
+
+//   // Setup palette color class name variable.
+//   $palette = $p->field_section_palette_list->getValue();
+//   $palettename = !empty($palette[0]['value']) ? $palette[0]['value'] : 'none';
+//   $variables['palette'] = 'bg-' . $palettename;
+
+//   // Setup width variable for template
+//   if(!$p->field_section_width->isEmpty()){
+//     switch ($p->field_section_width->get(0)->value) {
+//       case "1":
+//         $width = "section-content-width";
+//         break;
+//       case "2":
+//         $width = "section-full-width";
+//         break;
+//     }
+//     $variables['width'] = $width;
+//   }
+// }
+
+
+/**
+ * Implements hook_preprocess_paragraph__section().
+ * Prepares variables for paragraph--section.html.twig.
+ */
 function di_paragraphs_preprocess_paragraph__section(&$variables) {
   $p = $variables['paragraph'];
 
-  // Setup palette color class name variable.
-  $palette = $p->field_section_palette_list->getValue();
-  $palettename = !empty($palette[0]['value']) ? $palette[0]['value'] : 'none';
-  $variables['palette'] = 'bg-' . $palettename;
+  // Setup hex background color for template
+  if(!$p->field_section_background_color->isEmpty()){
+    $background_color = $p->field_section_background_color->get(0)->color;
+    $variables['background_color'] = 'background-color: ' . $background_color . ';';
+  }
+
+  // Setup hex text color for template
+  if(!$p->field_section_text_color->isEmpty()){
+    $text_color = $p->field_section_text_color->get(0)->color;
+    $variables['text_color'] = 'color: ' . $text_color . ';';
+  }
 
   // Setup width variable for template
   if(!$p->field_section_width->isEmpty()){

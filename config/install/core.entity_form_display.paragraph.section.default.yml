@@ -2,37 +2,50 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.section.field_section_background_color
     - field.field.paragraph.section.field_section_content
-    - field.field.paragraph.section.field_section_palette_list
+    - field.field.paragraph.section.field_section_link_color
+    - field.field.paragraph.section.field_section_link_hover_color
+    - field.field.paragraph.section.field_section_text_color
     - field.field.paragraph.section.field_section_width
     - paragraphs.paragraphs_type.section
   module:
+    - color_field
     - field_group
     - paragraphs
 third_party_settings:
   field_group:
-    group_background_options:
+    group_display_options:
       children:
-        - field_section_palette_list
+        - field_section_background_color
+        - field_section_text_color
+        - field_section_link_color
+        - field_section_link_hover_color
+        - field_section_width
       parent_name: ''
-      weight: 1
+      weight: 0
       format_type: details
       format_settings:
-        label: 'Color palette options'
-        required_fields: true
         id: ''
         classes: ''
         open: false
-      label: 'Color palette options'
+        required_fields: false
+      label: 'Background and Display Options'
       region: content
 id: paragraph.section.default
 targetEntityType: paragraph
 bundle: section
 mode: default
 content:
+  field_section_background_color:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
   field_section_content:
     type: paragraphs
-    weight: 5
+    weight: 6
     settings:
       title: chunk
       title_plural: chunk
@@ -48,14 +61,26 @@ content:
         add_above: add_above
     third_party_settings: {  }
     region: content
-  field_section_palette_list:
+  field_section_link_color:
     weight: 3
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: color_field_widget_html5
+    region: content
+  field_section_link_hover_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_section_text_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
     region: content
   field_section_width:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_buttons

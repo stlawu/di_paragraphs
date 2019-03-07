@@ -2,24 +2,36 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.media.field_caption
+    - field.field.paragraph.media.field_citation
     - field.field.paragraph.media.field_media
-    - field.field.paragraph.media.field_media_caption
     - paragraphs.paragraphs_type.media
   module:
+    - field_group
     - media_library
     - text
+third_party_settings:
+  field_group:
+    group_extras:
+      children:
+        - field_citation
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        label: 'Caption and Citation (Deprecated)'
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Caption and Citation (Deprecated)'
+      region: content
 id: paragraph.media.default
 targetEntityType: paragraph
 bundle: media
 mode: default
 content:
-  field_media:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: media_library_widget
-    region: content
-  field_media_caption:
+  field_caption:
     weight: 1
     settings:
       rows: 5
@@ -27,7 +39,22 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_citation:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_media:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
 hidden:
   created: true
+  moderation_state: true
   status: true
   uid: true
