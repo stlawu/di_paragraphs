@@ -1,0 +1,14 @@
+{
+  "name": "stlawu/di_paragraphs",
+  "type": "drupal-custom-module",
+  "description": "Paragraphs and shared fields.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/stlawu/di_paragraphs",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "",
+    "source": ""
+  },
+  "require": { }
+}
