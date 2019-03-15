@@ -98,9 +98,9 @@
 // Adapted from .container-fluid in
 // Bootstrap 3.3.7 bootstrap/assets/stylesheets/bootstrap/_grid.scss partial
 
-.field--name-field-sections > .paragraph {
-  padding-top: $line-height-computed;
-  padding-bottom: $line-height-computed;
+.section-container > .field--name-field-section-content {
+  margin-top: $line-height-computed;
+  margin-bottom: $line-height-computed;
 }
  
 
