@@ -6,6 +6,11 @@
 
  @import "paragraphs-variables";
 
+.paragraph--type--grid-row {
+  margin-left:  floor(($grid-gutter-width / -2));
+  margin-right: ceil(($grid-gutter-width / -2));
+}
+
 .paragraph--type--grid-column {
   margin-top:  floor(($grid-gutter-width / 2));
   padding-left:  floor(($grid-gutter-width / 2));

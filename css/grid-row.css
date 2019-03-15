@@ -8,6 +8,10 @@
  * Based off of Bootstrap 3.3.7
  *
  */
+.paragraph--type--grid-row {
+  margin-left: -15px;
+  margin-right: -15px; }
+
 .paragraph--type--grid-column {
   margin-top: 15px;
   padding-left: 15px;
