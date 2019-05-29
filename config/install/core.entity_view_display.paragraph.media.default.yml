@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.media.field_media
+    - field.field.paragraph.media.field_media_align
     - field.field.paragraph.media.field_media_caption
     - paragraphs.paragraphs_type.media
   module:
@@ -16,8 +17,8 @@ content:
     weight: 0
     label: hidden
     settings:
-      link: false
       view_mode: basic
+      link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
@@ -28,4 +29,5 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-hidden: {  }
+hidden:
+  field_media_align: true
