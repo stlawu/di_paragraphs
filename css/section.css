@@ -37,4 +37,9 @@
     .section-content-width {
       width: 1170px; } }
 
+.field--name-field-section-content::after {
+  content: "";
+  display: block;
+  clear: both; }
+
 /*# sourceMappingURL=section.css.map */

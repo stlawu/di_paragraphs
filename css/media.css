@@ -1,0 +1,15 @@
+/**
+ * Media paragraph type
+ * Based off of Bootstrap 3.3.7
+ * 
+ */
+/**
+ * Paragraphs Variables.
+ * Based off of Bootstrap 3.3.7
+ *
+ */
+.paragraph--type--media.align-left,
+.paragraph--type--media.align-right {
+  max-width: 33.33333333%; }
+
+/*# sourceMappingURL=media.css.map */

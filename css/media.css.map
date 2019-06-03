@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;;;GAIG;ACJH;;;;GAIG;ADIH;mCACoC;EAChC,SAAS,EAAE,YAAY",
+"sources": ["../sass/media.scss","../sass/_paragraphs-variables.scss"],
+"names": [],
+"file": "media.css"
+}

@@ -103,7 +103,6 @@
   margin-bottom: $line-height-computed;
 }
  
-
 .section-container {
   @include container-fixed;
 }
@@ -113,4 +112,12 @@
   @media (min-width: $screen-lg-min) {
     width: $container-lg;
   }
+}
+
+// If floated media paragraphs are longer than adjacent paragraphs,
+// do not collapse the section content field
+.field--name-field-section-content::after {
+  content: "";
+  display: block;
+  clear: both;
 }
