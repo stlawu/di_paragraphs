@@ -69,6 +69,28 @@ function di_paragraphs_preprocess_paragraph__media(&$variables) {
     $align = $p->field_media_align->get(0)->value;
     $variables['align'] = 'align-' . $align;
   }
+
+  if ($p && $p->field_media) {
+    $media = $p->field_media->entity;
+    // Check for media entity and byline_freeform
+    if ($media && $media->hasField('field_media_byline_freeform')) {
+      // Setup has_byline_freeform boolean variable.
+      $has_byline_freeform = $media->field_media_byline_freeform->value;
+      $variables['has_byline_freeform'] = !empty($has_byline_freeform);
+      // Render the media entity's field_media_byline_freeform on media paragraph type.
+      $byline_freeform = $media->field_media_byline_freeform->view(['label' => 'hidden']);
+      $variables['byline_freeform'] = $byline_freeform;
+    }
+    // Check for media entity and transcript
+    if ($media && $media->hasField('field_media_transcript')) {
+      // Setup has_transcript boolean variable.
+      $has_transcript = $media->field_media_transcript->value;
+      $variables['has_transcript'] = !empty($has_transcript);
+      // Render the media entity's field_media_transcript on media paragraph type.
+      $transcript = $media->field_media_transcript->view(['label' => 'hidden']);
+      $variables['transcript'] = $transcript;
+    }
+  }
 }
 
 /**

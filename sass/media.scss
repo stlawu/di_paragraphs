@@ -8,5 +8,15 @@
 
 .paragraph--type--media.align-left,
 .paragraph--type--media.align-right {
-    max-width: 33.33333333%;
+  max-width: 33.33333333%;
+}
+
+.paragraph--type--media.align-right {
+  margin-left:  floor(($grid-gutter-width / 2));
+  margin-bottom: ceil(($grid-gutter-width / 2));
+}
+
+.paragraph--type--media.align-left {
+  margin-right:  floor(($grid-gutter-width / 2));
+  margin-bottom: ceil(($grid-gutter-width / 2));
 }
