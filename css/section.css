@@ -1,7 +1,6 @@
 /**
  * Section paragraph type
  * Based off of Bootstrap 3.3.7
- * 
  */
 /**
  * Paragraphs Variables.
@@ -19,7 +18,8 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-.section-container:before, .section-container:after {
+.section-container:before,
+.section-container:after {
   content: " ";
   display: table;
 }
@@ -33,7 +33,8 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-.section-content-width:before, .section-content-width:after {
+.section-content-width:before,
+.section-content-width:after {
   content: " ";
   display: table;
 }
